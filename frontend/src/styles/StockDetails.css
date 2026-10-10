@@ -1,0 +1,269 @@
+.details-container {
+  animation: fadeIn 0.3s ease;
+}
+
+.details-header {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.stock-info h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+}
+
+.stock-info .company-name {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.stock-info .sector-badge {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.stock-price-section {
+  text-align: right;
+}
+
+.current-price h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.price-change {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.price-change.positive {
+  color: var(--success-color);
+}
+
+.price-change.negative {
+  color: var(--danger-color);
+}
+
+.price-change svg {
+  font-size: 1.3rem;
+}
+
+/* Details Grid */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-box {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Holding Details */
+.holding-details {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+.holding-details h3 {
+  font-size: 1.3rem;
+  margin: 0 0 1.5rem 0;
+  color: var(--text-primary);
+}
+
+.holding-content {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.holding-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.holding-stat {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--light-bg);
+  border-radius: 0.5rem;
+}
+
+.holding-stat span {
+  display: block;
+}
+
+.holding-stat span:first-child {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.holding-stat .value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.holding-stat input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.holding-stat input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.holding-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.holding-actions button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.save-btn {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #059669;
+}
+
+.cancel-btn {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.cancel-btn:hover {
+  background-color: var(--text-secondary);
+  color: white;
+}
+
+.edit-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+.delete-btn {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+}
+
+/* Charts Section */
+.charts-section {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+}
+
+.charts-section h3 {
+  font-size: 1.3rem;
+  margin: 0 0 1.5rem 0;
+  color: var(--text-primary);
+}
+
+@media (max-width: 920px) {
+  .details-header {
+    flex-direction: column;
+  }
+
+  .stock-price-section {
+    text-align: left;
+  }
+
+  .holding-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .stock-info h1 {
+    font-size: 1.8rem;
+  }
+
+  .current-price h2 {
+    font-size: 1.8rem;
+  }
+
+  .holding-info {
+    grid-template-columns: 1fr;
+  }
+}

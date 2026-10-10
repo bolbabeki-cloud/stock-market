@@ -1,0 +1,197 @@
+.analytics-container {
+  animation: fadeIn 0.3s ease;
+}
+
+.analytics-container h1 {
+  font-size: 2rem;
+  margin: 0 0 2rem 0;
+  color: var(--text-primary);
+}
+
+/* Metrics Summary */
+.metrics-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.metric {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.metric:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.metric.positive {
+  border-left: 4px solid var(--success-color);
+}
+
+.metric.negative {
+  border-left: 4px solid var(--danger-color);
+}
+
+.metric .label {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.metric .value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.metric .percentage {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* Charts Grid */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.chart-box {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+}
+
+.chart-box h3 {
+  font-size: 1.2rem;
+  margin: 0 0 1.5rem 0;
+  color: var(--text-primary);
+}
+
+/* Performance Section */
+.performance-section {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 2.5rem;
+}
+
+.performance-section h3 {
+  font-size: 1.3rem;
+  margin: 0 0 1.5rem 0;
+  color: var(--text-primary);
+}
+
+/* Holdings Table */
+.holdings-table {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+}
+
+.holdings-table h3 {
+  font-size: 1.3rem;
+  margin: 0 0 1.5rem 0;
+  color: var(--text-primary);
+}
+
+.holdings-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.holdings-table th {
+  background-color: var(--light-bg);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 2px solid var(--border-color);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.holdings-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.holdings-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.holdings-table tbody tr:hover {
+  background-color: var(--light-bg);
+}
+
+.holdings-table .stock-symbol {
+  font-weight: 600;
+}
+
+.holdings-table td.positive {
+  color: var(--success-color);
+}
+
+.holdings-table td.negative {
+  color: var(--danger-color);
+}
+
+@media (max-width: 1024px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .metrics-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chart-box {
+    padding: 1.5rem;
+  }
+
+  .holdings-table {
+    overflow-x: auto;
+  }
+
+  .holdings-table th,
+  .holdings-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .metrics-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .holdings-table th,
+  .holdings-table td {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.75rem;
+  }
+
+  .analytics-container h1 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "myapp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.6.0",
+    "express": "^5.2.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-icons": "^4.12.0",
+    "react-scripts": "5.0.1",
+    "recharts": "^2.10.0"
+  },
+  "scripts": {
+    "start": "npm run build && node ../backend/marketServer.js",
+    "dev": "concurrently -k \"npm:market-server\" \"npm:react-start\"",
+    "react-start": "react-scripts start",
+    "market-server": "node ../backend/marketServer.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test --runInBand",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "proxy": "http://localhost:3001",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.4"
+  }
+}

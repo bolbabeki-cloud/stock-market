@@ -1,0 +1,2 @@
+Public market relay listening on http://127.0.0.1:3002
+Only quote and health routes are available through the relay.

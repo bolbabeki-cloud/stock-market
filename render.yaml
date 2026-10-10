@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: stock-portfolio-pro
+    runtime: node
+    plan: free
+    buildCommand: npm install --prefix frontend && npm install --prefix backend && npm run build --prefix frontend
+    startCommand: npm start --prefix backend
+    healthCheckPath: /api/health
+    envVars:
+      - key: MONGODB_URI
+        sync: false
